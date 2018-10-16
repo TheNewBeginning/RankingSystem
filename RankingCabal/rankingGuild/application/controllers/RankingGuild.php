@@ -10,8 +10,8 @@ class RankingGuild extends CI_Controller {
 	}
 	public function index () {
 		$dados['guild'] = $this->guild->buscaDados();
-		
-		$this->load->view("template/head");
+		$titulo['titulo'] = 'Cabal Private';
+		$this->load->view("template/head",$titulo);
 		$this->load->view("rankingGuildView/RankingGuildView",$dados);
 		$this->load->view("template/footer");
 		

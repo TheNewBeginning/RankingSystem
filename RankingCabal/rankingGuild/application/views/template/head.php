@@ -21,10 +21,9 @@
                 position: absolute;
             }
         </style>
-    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-compatible" content="IE=edge">
-        <title>CABAL</title>
+        <title><?php echo $titulo;?></title>
         <link rel="stylesheet" href="assets/resources/css/ranking.css">
         <link rel="icon" href="http://image.cabal.co.kr/favicon/favicon.ico"
               type="image/x-icon">
@@ -32,24 +31,24 @@
         <script src="assets/resources/js/ranking/jquery.mCustomScrollbar.min.js"></script>
         <script src="http://image.cabal.co.kr/cabal/js/jquery-mousewheel.3.1.12.min.js"></script>
         <script src="assets/resources/css/ranking.css"></script>
-        <!-- <script src="../assets/resources/js/ranking/glb.init.js"></script> -->
+        <script src="assets/resources/js/ranking/glb.init.js"></script>
 
-        <!--<script src="assets/resources/js/lib/angular/angular.js"></script>-->
-       <!--<script src="assets/resources/js/lib/angular-route/angular-route.js"></script>-->
-        <!--<script src="assets/resources/js/lib/angular-cookies/angular-cookies.js"></script>-->
-       <!--<script src="assets/resources/js/ranking/d3.min.js"></script>-->
-        <!--<script src="assets/resources/js/ranking/missionChart.js"></script>-->
+        <script src="assets/resources/js/lib/angular/angular.js"></script>
+       	<script src="assets/resources/js/lib/angular-route/angular-route.js"></script>
+        <script src="assets/resources/js/lib/angular-cookies/angular-cookies.js"></script>
+       	<script src="assets/resources/js/ranking/d3.min.js"></script>
+        <script src="assets/resources/js/ranking/missionChart.js"></script>
 
-        <!--<script src="assets/js/app.js"></script>-->
-        <!--<script src="assets/js/service.js"></script>-->
-       <!--  <script src="../../assets/js/controller.js"></script>-->
-       <!--<script src="assets/js/directive.js"></script>-->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/service.js"></script>
+        <script src="assets/js/controller.js"></script>
+        <script src="assets/js/directive.js"></script>
 
-        <!-- <script src="assets/initial/js/locale.js"></script>-->
-        <!-- <script src="assets/initial/js/service.js"></script>-->
-        <!-- <script src="assets/initial/js/constant.js"></script>-->
-        <!-- <script src="assets/initial/js/directive.js"></script>-->
-        <!-- <script src="assets/initial/js/controller.js"></script>  -->
+        <script src="assets/initial/js/locale.js"></script>
+        <script src="assets/initial/js/service.js"></script>
+        <script src="assets/initial/js/constant.js"></script>
+        <script src="assets/initial/js/directive.js"></script>
+        <script src="assets/initial/js/controller.js"></script>
     </head>
     <body>
         <a href="#content" class="skip">Skip To Main Contents</a>
@@ -217,8 +216,8 @@
 
             <!--content-->
             <!-- ngView:  -->
-            <div class="section content" id="content">
-                <div class="container">
+            <div class="section content ng-scope" id="content" ng-view="">
+                <div class="container ng-scope" data-ng-init="searchCharacterLeaderTop100('combat', 'point_ad', 20)">
                     <h2 class="blind">Leader Board</h2>
                     <div class="content_wrap">
                         <div class="content_title">
