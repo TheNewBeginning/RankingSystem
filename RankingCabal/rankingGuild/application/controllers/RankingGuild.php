@@ -24,4 +24,36 @@ class RankingGuild extends CI_Controller {
 		$this->load->view("template/footerSemPagina");
 		
 	}
+	
+	public function Titulos () {
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head",$titulo);
+		$this->load->view("rankingGuildView/Titulos",$titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
+	
+	public function Honra () {
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head",$titulo);
+		$this->load->view("rankingGuildView/Honra",$titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
+	
+	public function PVP () {
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head",$titulo);
+		$this->load->view("rankingGuildView/PVP",$titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
+	
+	public function MissionWar () {
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head",$titulo);
+		$this->load->view("rankingGuildView/MissionWar",$titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
 }

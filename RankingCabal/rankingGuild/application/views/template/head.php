@@ -68,34 +68,28 @@
                                     <div class="depth2 on">
                                         <div>
                                             <ul>
-                                                <li class="d2_top100 on">
+                                                <li class="d2_gsc on">
                                                 	<a href="<?php echo base_url()?>" class="top100"> 
                                                 		<span class="mcon"></span> 
-                                                		<span class="text">GLB Top100</span>
+                                                		<span class="text">Guild Top 100</span>
                                                     </a>
                                                	</li>
                                                 <li class="d2_top3"><a href="<?php echo base_url('Top3')?>"
                                                                        class="top100" ><span
                                                             class="mcon"></span><span class="text"> Top3</span></a></li>
                                                 <!-- <li class="d2_dc"><a href="/leaderboard/#/dungeonClear" class="top100" ng-click="call('lb_dc');"><span class="mcon"></span><span class="text">{{applyLocale("Dungeon Clear")}}</span></a></li> -->
-                                                <li class="d2_ach"><a href="/leaderboard/#/achievement"
+                                                <li class="d2_ach"><a href="<?php echo base_url('Titulos')?>"
                                                                       class="top100" ><span
-                                                            class="mcon"></span><span class="text">??</span></a></li>
-                                                <li class="d2_hp"><a href="/leaderboard/#/honor"
+                                                            class="mcon"></span><span class="text">Titulos</span></a></li>
+                                                <li class="d2_hp"><a href="<?php echo base_url('Honra')?>"
                                                                      class="top100" ><span
-                                                            class="mcon"></span><span class="text">??
-                                                            ??</span></a></li>
-                                                <li class="d2_ad"><a href="/leaderboard/#/combat"
+                                                            class="mcon"></span><span class="text">Honra</span></a></li>
+                                                <li class="d2_ad"><a href="<?php echo base_url('PVP')?>"
                                                                      class="top100" ><span
-                                                            class="mcon"></span><span class="text">?????</span></a></li>
-                                                <li class="d2_mw"><a href="/leaderboard/#/missionWar"
+                                                            class="mcon"></span><span class="text">Luta PVP</span></a></li>
+                                                <li class="d2_mw"><a href="<?php echo base_url('MissionWar')?>"
                                                                      class="top100" ><span
-                                                            class="mcon"></span><span class="text">??
-                                                            ??</span></a></li>
-                                                <li class="d2_gsc"><a href="/leaderboard/#/guildScore"
-                                                                      class="top100"><span
-                                                            class="mcon"></span><span class="text">??
-                                                            ??</span></a></li>
+                                                            class="mcon"></span><span class="text">Missão de Guerra</span></a></li>
                                             </ul>
                                         </div>
                                     </div></li>

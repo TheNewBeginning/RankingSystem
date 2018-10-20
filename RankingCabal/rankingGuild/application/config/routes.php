@@ -53,3 +53,7 @@ $route['default_controller'] = 'RankingGuild';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['Top3'] = 'RankingGuild/Top3';
+$route['Titulos'] = 'RankingGuild/Titulos';
+$route['Honra'] = 'RankingGuild/Honra';
+$route['PVP'] = 'RankingGuild/PVP';
+$route['MissionWar'] = 'RankingGuild/MissionWar';
