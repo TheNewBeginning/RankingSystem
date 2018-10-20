@@ -50,16 +50,20 @@ function definePoderGuild ($powerGuild) {
 		return '<span class="pm5 m5"></span>';
 	 elseif ($powerGuild >= 350000 && $powerGuild <= 530000) :
 		return '<span class="pm6 m6"></span>';
-	else :
-		// Esse Else controla se caso a Guild ter pontos maior do que 530k ou
-		// igual.
-		// ($powerGuild >= 530000)
+	 elseif ($powerGuild >=530000):
 		return '<span class="pm7 m7"></span>';
 	endif;
 	
 }
 
+function defineMaestria ($expRank) {
+	
+	return $maestria = definePoderGuild($expRank);
+	
+}
+
 ?>
+	
 <div class="table_wrap table2">
 	<table class="tb_char7">
 		<thead>
@@ -67,6 +71,7 @@ function definePoderGuild ($powerGuild) {
 				<th scope="col" class="tb_rank ">Posi&ccedil;&atilde;o</th>
 				<th scope="col" class="tb_point ">Pontos</th>
 				<th scope="col" class="tb_name ">Nome da Guild</th>
+				<th scope="col" class="tb_level ">Level Guild</th>
 				<th scope="col" class="tb_mastery_guild">Maestria G.</th>
 				<th scope="col" class="tb_name ">Poder da Guild</th>
 				<th scope="col" class="tb_level ">Level Master</th>
@@ -100,18 +105,21 @@ foreach ($guild as $g) :
 
 				<td class="tb_point"><span class="elps ng-binding"><?php echo $g->Point;?></span>
 				</td>
-
-				<td class="tb_name"><span class="elps" title="??cC"> <a
+				
+				<td class="tb_name"><span class="elps" title="<?php echo $g->GuildName?>"> <a
 						ng-click="selectCharacter(row.server_no, row.character_name, row.nation_code)"
 						style="text-decoration: none; cursor: pointer;" class="ng-binding">
 						<?php echo $g->GuildName;?></a>
 				</span></td>
 
+				<td class="tb_level"><span class="elps ng-binding"><?php echo $g->Level;?></span>
+				</td>
+				
 				<td class="tb_mastery_guild tb_last_guild">
 					<?php echo defineMaestria($g->ExpRank);?>
 				</td>
 
-				<td class="tb_name"><span class="elps" title="??cC"> <a
+				<td class="tb_name"><span class="elps" title="<?php echo $g->ExpRank?>"> <a
 						ng-click="selectCharacter(row.server_no, row.character_name, row.nation_code)"
 						style="text-decoration: none; cursor: pointer;" class="ng-binding">
 						<?php echo $g->ExpRank;?></a>
@@ -136,10 +144,4 @@ foreach ($guild as $g) :
 		</tbody>
 	</table>
 </div>
-<?php
-
-function defineMaestria($expRank){
-	return $maestria = definePoderGuild($expRank);
-}
-
-?>
+	

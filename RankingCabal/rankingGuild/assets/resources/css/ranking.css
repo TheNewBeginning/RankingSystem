@@ -699,14 +699,7 @@ table td .vary.new{background:0 none;color:#ff0000;padding-left:0}
 .table_glb3 .tb_mastery_guild{min-width:85px;max-width:151px}
 .table1 .tb_mastery_guild{width:76px}
 .mission_war .table2 .tb_char7 .tb_mastery_guild{z-index:1}
-/*M1 Está funcionando com essas substituição*/
-/*table tr td .icon2{background: url("../images/pm1.png") no-repeat;}
-.table_wrap td .tb_last_guild{border-right:0 none !important}
-table td .vary, table td .icon2{display:inline-block; *display:inline; *zoom:1;vertical-align:middle}
-table td .icon2{width:25px;height:25px; background-position:-240px -78px}
-.tb_mastery_guild .icon2.m1{background-position:-30px -78px}
-*/
-
+/*Alteração para funcionar os Emblemas da Maestria*/
 table tr td .pm1{background: url("../images/pm1.png") no-repeat;}
 table tr td .pm2{background: url("../images/pm2.png") no-repeat;}
 table tr td .pm3{background: url("../images/pm3.png") no-repeat;}
@@ -736,3 +729,16 @@ table td .pm7{width:25px;height:25px; background-position:-240px -78px}
 .tb_mastery_guild tr.pm5.m5{background-position:-30px -78px}
 .tb_mastery_guild tr.pm6.m6{background-position:-30px -78px}
 .tb_mastery_guild tr.pm7.m7{background-position:-30px -78px}
+
+/*Modificação das Class do Top 3*/
+.top100 .grade_top3{overflow:hidden;margin-bottom:9px}
+.top100 .grade_top3 table{width:100%;*width:auto;*table-layout:fixed}
+.top100 table{margin:0 auto}
+.top100 .grade_top3 td{height:99px;text-align:left;vertical-align:top}
+.top100 .grade_top3 td div{border-top:1px solid #309ad6;border-bottom:1px solid #309ad6;height:87px;overflow:hidden;text-overflow:ellipsis;word-break:break-all;white-space:nowrap;line-height:84px}
+.grade_top3 .tb_name div, .grade_top3 .tb_point1 div, .grade_top3 .tb_level div, .grade_top3 .tb_gname div{padding-right:10px}
+.grade_top3 .tb_rank1{width:130px;max-width:130px}
+.grade_top3 .tb_rank1 div{border-left:1px solid #309ad6;border-radius:87px 0 0 87px;padding-left:50px}
+.grade_top3 .tb_rank1 .ranking1{font-size:35px}
+.grade_top3 .global1 .tb_rank1 div{border-right:1px solid #309ad6}
+.grade_top3 .tb_point1{min-width:127px;max-width:175px}

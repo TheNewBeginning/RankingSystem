@@ -17,4 +17,11 @@ class RankingGuild extends CI_Controller {
 		
 	}
 	
+	public function top3 () {
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head",$titulo);
+		$this->load->view("rankingGuildView/Top3",$titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
 }

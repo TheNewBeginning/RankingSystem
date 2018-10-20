@@ -74,7 +74,7 @@
                                                 		<span class="text">GLB Top100</span>
                                                     </a>
                                                	</li>
-                                                <li class="d2_top3"><a href="/leaderboard/#/top3"
+                                                <li class="d2_top3"><a href="<?php echo base_url('Top3')?>"
                                                                        class="top100" ><span
                                                             class="mcon"></span><span class="text"> Top3</span></a></li>
                                                 <!-- <li class="d2_dc"><a href="/leaderboard/#/dungeonClear" class="top100" ng-click="call('lb_dc');"><span class="mcon"></span><span class="text">{{applyLocale("Dungeon Clear")}}</span></a></li> -->

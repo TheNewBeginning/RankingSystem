@@ -1,9 +1,3 @@
-                        <div class="table_bottom">
-                            <dl class="updated">
-                                <dt class="ng-binding">??? ???? :</dt>
-                                <dd class="ng-binding">2018-09-30</dd>
-                            </dl>
-                        </div>
                         <div class="table_pager">
                             <span class="num"><a href="" ng-click="move(1)" class="on">1</a><a
                                     href="" ng-click="move(2)">2</a><a href="" ng-click="move(3)">3</a><a
