@@ -1,5 +1,6 @@
 # RankingSystem
 É um Sistema de Ranking Completo onde você terá a chance ver
+
 -Ranking de Guild
 
 -Ranking do char
