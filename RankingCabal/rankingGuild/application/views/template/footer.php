@@ -1,8 +1,3 @@
-                        <div class="table_pager">
-                            <span class="num"><a href="" ng-click="move(1)" class="on">1</a><a
-                                    href="" ng-click="move(2)">2</a><a href="" ng-click="move(3)">3</a><a
-                                    href="" ng-click="move(4)">4</a><a href="" ng-click="move(5)">5</a></span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -17,6 +12,17 @@
             </div>
         </div>
 
+<!-- IE10 viewport hack para Surface/desktop Windows 8 -->
+<script src="<?=base_url('assets/js/plugins/ie10-viewport-bug-workaround.js')?>"></script>
+
+<!-- jQuery -->
+<script src="<?=base_url('assets/js/jquery/1.12.2.min.js')?>"></script>
+
+<!-- Bootstrap -->
+<script src="<?=base_url('assets/js/bootstrap/bootstrap.min.js')?>"></script>
+
+<!-- Script -->
+<script src="<?=base_url('assets/js/scripts.js')?>"></script>
 
     </body>
 </html>

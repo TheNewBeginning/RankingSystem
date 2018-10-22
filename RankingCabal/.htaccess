@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+RewriteOptions inherit
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^http://cabalprivate.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://cabalprivate.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.cabalprivate.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.cabalprivate.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://cabalprivate.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://cabalprivate.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.cabalprivate.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.cabalprivate.com.br$      [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+# Use PHPstable as default
+AddHandler application/x-httpd-php-stable .php
+<IfModule mod_suphp.c>
+    suPHP_ConfigPath /opt/phpstable/lib
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'RankingGuild';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['usuarios/p'] = 'RankingGuild';
+$route['usuarios/p/(:num)'] = 'RankingGuild';
 $route['Top3'] = 'RankingGuild/Top3';
 $route['Titulos'] = 'RankingGuild/Titulos';
 $route['Honra'] = 'RankingGuild/Honra';

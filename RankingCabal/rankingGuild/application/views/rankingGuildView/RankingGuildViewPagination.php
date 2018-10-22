@@ -39,19 +39,19 @@ function defineClass ($classe) {
 function definePoderGuild ($powerGuild) {
 	
 	if ($powerGuild < 15000) :
-		return '<span class="pm1 m1"></span>';
-	 elseif ($powerGuild >= 15000 && $powerGuild <= 35000) :
-		return '<span class="pm2 m2"></span>';
-	 elseif ($powerGuild >= 35000 && $powerGuild <= 80000) :
-		return '<span class="pm3 m3"></span>';
-	 elseif ($powerGuild >= 80000 && $powerGuild <= 180000) :
-		return '<span class="pm4 m4"></span>';
-	 elseif ($powerGuild >= 180000 && $powerGuild <= 350000) :
-		return '<span class="pm5 m5"></span>';
-	 elseif ($powerGuild >= 350000 && $powerGuild <= 530000) :
-		return '<span class="pm6 m6"></span>';
-	 elseif ($powerGuild >= 530000) :
-		return '<span class="pm7 m7"></span>';
+	return '<span class="pm1 m1"></span>';
+	elseif ($powerGuild >= 15000 && $powerGuild <= 35000) :
+	return '<span class="pm2 m2"></span>';
+	elseif ($powerGuild >= 35000 && $powerGuild <= 80000) :
+	return '<span class="pm3 m3"></span>';
+	elseif ($powerGuild >= 80000 && $powerGuild <= 180000) :
+	return '<span class="pm4 m4"></span>';
+	elseif ($powerGuild >= 180000 && $powerGuild <= 350000) :
+	return '<span class="pm5 m5"></span>';
+	elseif ($powerGuild >= 350000 && $powerGuild <= 530000) :
+	return '<span class="pm6 m6"></span>';
+	elseif ($powerGuild >= 530000) :
+	return '<span class="pm7 m7"></span>';
 	endif;
 	
 }
@@ -146,3 +146,4 @@ foreach ($guild as $g) :
 		</tbody>
 	</table>
 </div>
+<?php echo $pagination; ?>

@@ -1,10 +1,10 @@
+@charset "utf-8";
+
 /* reset */
-html{
-	overflow-y:scroll;
-	}
-html,body{width:100%;height:100%}
-html,body,div,p,img,span,a,em,strong,pre,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,tbody,thead,tfoot,tr,th,td,form,fieldset,legend,caption,input,textarea,button,select,object,video,iframe{margin:0;padding:0}
-body{position:relative;line-height:1;background:#292D38}
+html{overflow-y:scroll;}
+html,body{width:100%;height:100%;}
+html,body,div,p,img,span,a,em,strong,pre,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,tbody,thead,tfoot,tr,th,td,form,fieldset,legend,caption,input,textarea,button,select,object,video,iframe{margin:0;padding:0;}
+body{position:relative;line-height:1;background:#292D38;}
 body,h1,h2,h3,h4,h5,h6,input,textarea,button,select{font-family:tahoma,sans-serif;font-size:16px;color:#fff;-webkit-text-size-adjust:none}
 table{border-collapse:collapse;border-spacing:0}
 ul,ol{list-style:none}
@@ -699,7 +699,7 @@ table td .vary.new{background:0 none;color:#ff0000;padding-left:0}
 .table_glb3 .tb_mastery_guild{min-width:85px;max-width:151px}
 .table1 .tb_mastery_guild{width:76px}
 .mission_war .table2 .tb_char7 .tb_mastery_guild{z-index:1}
-/*Alteração para funcionar os Emblemas da Maestria*/
+/*AlteraÃ§Ã£o para funcionar os Emblemas da Maestria*/
 table tr td .pm1{background: url("../images/pm1.png") no-repeat;}
 table tr td .pm2{background: url("../images/pm2.png") no-repeat;}
 table tr td .pm3{background: url("../images/pm3.png") no-repeat;}
@@ -730,7 +730,7 @@ table td .pm7{width:25px;height:25px; background-position:-240px -78px}
 .tb_mastery_guild tr.pm6.m6{background-position:-30px -78px}
 .tb_mastery_guild tr.pm7.m7{background-position:-30px -78px}
 
-/*Modificação das Class do Top 3*/
+/*ModificaÃ§Ã£o das Class do Top 3*/
 .top100 .grade_top3{overflow:hidden;margin-bottom:9px}
 .top100 .grade_top3 table{width:100%;*width:auto;*table-layout:fixed}
 .top100 table{margin:0 auto}
