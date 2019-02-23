@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'odbc:Driver={SQL Native Client};Server=54.39.29.64;Database=Server02; Uid=sa;Pwd=8AktkuxMMM60jq;',
 	'hostname' => '54.39.29.64',
 	'username' => 'sa',
-	'password' => '50tGV7mmYt0D',
-	'database' => 'Server01',
-	'dbdriver' => 'sqlsrv',
+	'password' => '8AktkuxMMM60jq',
+	'database' => 'Server02',
+	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => true,
 	'db_debug' => (ENVIRONMENT !== 'production'),

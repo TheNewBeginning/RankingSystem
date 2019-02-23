@@ -59,3 +59,4 @@ $route['Titulos'] = 'RankingGuild/Titulos';
 $route['Honra'] = 'RankingGuild/Honra';
 $route['PVP'] = 'RankingGuild/PVP';
 $route['MissionWar'] = 'RankingGuild/MissionWar';
+$route['CharacterRanking'] = 'RankingGuild/CharacterRanking';

@@ -6,14 +6,7 @@
 <body>
 
 <?php
-$i=0;
-foreach ($guild as $s) :
-?>
-<p><?php echo "VALOR I:",++$i?></p>
-<p><?php echo $s->GuildNo?></p>
-<?php
-endforeach
-;
+echo date("YW", strtotime("2019-02-16"));
 
 ?>
 </body>

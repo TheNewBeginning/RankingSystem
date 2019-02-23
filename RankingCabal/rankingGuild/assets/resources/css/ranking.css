@@ -246,6 +246,10 @@ table td .vary.new{background:0 none;color:#ff0000;padding-left:0}
 .header .gnb .link .depth2 li{height:auto;vertical-align:middle;float:none;padding:0 30px;*margin:24px 0}
 .header .gnb .link .depth2 li a{display:block;line-height:1.2;color:#fff;filter:alpha(opacity=40);opacity:0.4;text-align:center;*zoom:1}
 .header .gnb .link .depth2 li a:hover{text-decoration:none}
+.header .gnb .link:active{
+  border-radius:48px;color:#fff;
+}
+
 .header .gnb .link .depth2 li.on a, .header .gnb li .depth2 li a:hover, .header .gnb li .depth2 li a:focus{filter:alpha(opacity=100);opacity:1}
 .header .gnb .link .depth2 li a span{display:block;word-break:keep-all;cursor:pointer}
 .header .gnb .link .depth2 li .mcon{height:41px;background:url("../images/spr_gnb-depth2.png") 50% 0 no-repeat}

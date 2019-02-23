@@ -3,20 +3,71 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class RankingGuild extends CI_Controller {
 	
-	function __construct () {
-		
+	function __construct(){
 		parent::__construct();
-		$this->load->model("RankingGuildModel", "guild");
+		$this->load->model("RankingGuildModel","guild");
 		$this->load->helper('url');
+	}
+
+	public function index () {
+		$dados['ranking'] = $this->guild->buscaDados();
+		$titulo['titulo'] = 'Cabal Private';
+		$this->load->view("template/head",$titulo);
+		$this->load->view("rankingGuildView/RankingGuildView",$dados);
+		$this->load->view("template/footer");
+	}
+
+
+	public function top3 () {
+		//$dados['top3'] = $this->guild->buscaCharacterTop3();
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head", $titulo);
+		$this->load->view("rankingGuildView/Top3", $titulo);
+		$this->load->view("template/footerSemPagina");
 		
 	}
 	
-	public function index(){
-		$guildNo="";
-		$dados['guild'] = $this->guild->buscaDados();
-		$guildNo = $guild->GuildNo;
-		$dados['guildMember'] = $this->guild->buscaQntdGuild($guildNo);
-		$this->load->view("teste",$dados);
+	public function Titulos () {
+		
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head", $titulo);
+		$this->load->view("rankingGuildView/Titulos", $titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
+	
+	public function Honra () {
+		$dados['honra'] = $this->guild->buscaCharacterHonor();
+		$titulo['titulo'] = 'Cabal Private - Honra';
+		$this->load->view("template/head", $titulo);
+		$this->load->view("rankingGuildView/Honra", $dados);
+		$this->load->view("template/footerSemPagina");
+	}
+	
+	public function PVP () {
+		
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head", $titulo);
+		$this->load->view("rankingGuildView/PVP", $titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
+	
+	public function MissionWar () {
+		
+		$titulo['titulo'] = 'Cabal Private - Top3';
+		$this->load->view("template/head", $titulo);
+		$this->load->view("rankingGuildView/MissionWar", $titulo);
+		$this->load->view("template/footerSemPagina");
+		
+	}
+
+	public function CharacterRanking () {
+		$dados['Character'] = $this->guild->searchCharacterTOP50();
+		$titulo['titulo'] = 'Cabal Private - Character Ranking';
+		$this->load->view("template/head", $titulo);
+		$this->load->view("rankingGuildView/Character/CharacterRanking", $dados);
+		$this->load->view("template/footerSemPagina");
 		
 	}
 	/*
@@ -42,7 +93,7 @@ class RankingGuild extends CI_Controller {
 						"prev_link" => "Anterior",
 						"prev_tag_open" => "<li class='prev'>",
 						"prev_tag_close" => "</li>",
-						"next_link" => "Próxima",
+						"next_link" => "PrÃ³xima",
 						"next_tag_open" => "<li class='next'>",
 						"next_tag_close" => "</li>",
 						"last_tag_open" => "<li>",
@@ -74,52 +125,5 @@ class RankingGuild extends CI_Controller {
 		//$this->load->view("rankingGuildView/RankingGuildView", $dados);	
 		$this->load->view("template/footer");
 		
-	}*/
-	
-	public function top3 () {
-		
-		$titulo['titulo'] = 'Cabal Private - Top3';
-		$this->load->view("template/head", $titulo);
-		$this->load->view("rankingGuildView/Top3", $titulo);
-		$this->load->view("template/footerSemPagina");
-		
-	}
-	
-	public function Titulos () {
-		
-		$titulo['titulo'] = 'Cabal Private - Top3';
-		$this->load->view("template/head", $titulo);
-		$this->load->view("rankingGuildView/Titulos", $titulo);
-		$this->load->view("template/footerSemPagina");
-		
-	}
-	
-	public function Honra () {
-		
-		$titulo['titulo'] = 'Cabal Private - Top3';
-		$this->load->view("template/head", $titulo);
-		$this->load->view("rankingGuildView/Honra", $titulo);
-		$this->load->view("template/footerSemPagina");
-		
-	}
-	
-	public function PVP () {
-		
-		$titulo['titulo'] = 'Cabal Private - Top3';
-		$this->load->view("template/head", $titulo);
-		$this->load->view("rankingGuildView/PVP", $titulo);
-		$this->load->view("template/footerSemPagina");
-		
-	}
-	
-	public function MissionWar () {
-		
-		$titulo['titulo'] = 'Cabal Private - Top3';
-		$this->load->view("template/head", $titulo);
-		$this->load->view("rankingGuildView/MissionWar", $titulo);
-		$this->load->view("template/footerSemPagina");
-		
-	}
-	
-	
+	}*/	
 }
